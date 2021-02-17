@@ -1,17 +1,13 @@
 {
-  "name": "nodejs-core",
+  "name": "nodejs-app",
   "version": "0.10.0",
-  "description": "A core server using nodejs, mongo",
+  "description": "NodeJS app",
   "main": "index.js",
   "scripts": {
     "build": "npm run clean && babel app -d build",
     "clean": "rm -rf build && mkdir build",
     "start": "nodemon",
-    "test": "NODE_ENV=test mocha --recursive --reporter spec --compilers js:babel-register tests",
-    "lint": "eslint app",
-    "test:watch": "nodemon --exec 'npm run test' tests",
-    "coverage": "NODE_ENV=test babel-node ./node_modules/.bin/isparta cover _mocha -- --recursive --reporter spec --compilers js:babel-register tests",
-    "validate": "npm run test && npm outdated --depth 0"
+    "lint": "eslint app"
   },
   "engines": {
     "node": ">= 6",
@@ -31,7 +27,7 @@
   "author": "Muoi Doan",
   "dependencies": {
     "babel-core": "^6.18.0",
-    "bcrypt": "^1.0.0",
+    "bcrypt": "^5.0.0",
     "body-parser": "^1.15.2",
     "cors": "^2.8.1",
     "dotenv": "^4.0.0",
